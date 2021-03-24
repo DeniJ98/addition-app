@@ -1,0 +1,41 @@
+.padding-top--40{
+  padding-top: 40px;
+}
+
+.margin-right--40{
+  margin-right: 40px;
+}
+
+.content-center{
+  display: flex;
+  justify-content: center;
+}
+
+.equation {
+ font-size: xx-large;
+ font-weight: 400;
+ line-height: 24px;
+}
+
+.feedback{
+  font-size: x-large;
+  padding: 1rem 0 2rem 0;
+}
+
+.text--red{
+  color: red
+}
+
+.text--green{
+  color: green;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}

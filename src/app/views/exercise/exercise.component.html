@@ -1,0 +1,60 @@
+<main>
+  <div class="container padding-top--40">
+    <div class="row">
+      <div class="col-12">
+        <mat-card>
+          <mat-card-title>
+            Let's learn addition!
+          </mat-card-title>
+          <mat-card-subtitle class="padding-top--40">
+            Solve the exercise below, check your answer and keep on practicing!
+          </mat-card-subtitle>
+          <mat-card-content>
+            <div class="row">
+              <div class="col-12">
+                <div class="container content-center">
+                  <div class="equation">
+                    {{firstNumber}}
+                    <span *ngIf="secondNumber >= 0">+</span>
+                    {{secondNumber}} =
+                    <mat-form-field>
+                      <mat-label>?</mat-label>
+                      <input matInput [(ngModel)]="result" type="number" #ctrl="ngModel">
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 content-center feedback">
+                <div
+                  [ngClass]="{
+                    'text--red': !feedbackValue,
+                    'text--green': feedbackValue
+                  }"
+                >{{ feedbackMessage }}</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 content-center">
+                <button mat-raised-button
+                  class="margin-right--40"
+                  [disabled]="!result"
+                  color="primary"
+                  (click)="verifyAnswer()">
+                    Verify answer
+                </button>
+                <button
+                  mat-raised-button
+                  color="accent"
+                  (click)="formNewEquation()">
+                    Try another one!
+                </button>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</main>
